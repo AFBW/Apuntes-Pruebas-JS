@@ -40,3 +40,57 @@ for (let i = 0; i <= 10; i++) {
     calculadora(i, 2);
 }
 */
+
+// Funcion de CallBack:
+// Funciones que van a pasar argumentos a otra funcion
+
+// Ejemplo 1:
+function main(callback) {
+    alert('Primero hago algo y despues ejecuto el callback');
+    callback();
+}
+
+// Manera 1
+/*
+function greeting() {
+    alert('Yo soy un callback!!');
+}
+
+main(greeting);
+*/
+
+// Manera 2
+
+main(function ()){
+    alert('Otro callBack');
+}
+
+
+// Ejemplo 2:
+function userName(callback) {
+    var name = prump('Give me your name: ');
+    callback(name);
+}
+
+function buildGreeting(name) {
+    alert('Hola ' + name);
+}
+
+userName(buildGreeting);
+
+// Ejemplo 3:
+function math(a, b, callback) {
+    var res = a + b;
+
+    callback(res);
+}
+
+function suma(res) {
+    if (res > 10) {
+        alert('El resultado de la suma es muy grande');
+    } else {
+        alert('El resultado de la suma es muy pequeño');
+    }
+}
+
+math(5, 3, suma);
