@@ -69,3 +69,13 @@ console.log(corte);
 
 let corte1 = texto1.slice(3, 7); // Nos corta una secuencia
 console.log(corte1);
+
+// Separar 
+
+let separar = texto1.split("  "); // Nos separa los elementos
+console.log(separar);
+
+// Trim
+
+let trim = texto1.trim(); // Nos cquita los espacios al principio y al final
+console.log(trim);
